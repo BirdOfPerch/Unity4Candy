@@ -7,9 +7,9 @@ public class CandyManager : MonoBehaviour
     const int DefaultCandyAmount = 30;
     const int RecoverySeconds = 10;
 
-    // 現在のキャンディのストック数
+    // キャンディのストック数
     public int candy = DefaultCandyAmount;
-    // ストック回復までの残り秒数 
+    // ストック回復までの秒数 
     int counter;
 
     public void ConsumeCandy()
@@ -31,7 +31,7 @@ public class CandyManager : MonoBehaviour
     {
         GUI.color = Color.black;
 
-        // キャンディのストック数を表示
+        // キャンディストック数の表示
         string label = "Candy : " + candy;
 
         // 回復カウントしている時だけ秒数を表示
