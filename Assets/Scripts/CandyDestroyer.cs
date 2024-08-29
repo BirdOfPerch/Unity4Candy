@@ -16,16 +16,13 @@ public class CandyDestroyer : MonoBehaviour
             // 指定数だけCandyのストックを増やす          
             candyManager.AddCandy(reward);
 
-            // オブジェクトを削除
+            // オブジェクトの削除
             Destroy(other.gameObject);
 
             if (effectPrefab != null)
             {
-                // Candyのポジションにエフェクトを生成 
-                Instantiate(
-                    effectPrefab,
-                    other.transform.position,
-                    Quaternion.Euler(effectRotation)
+                // Candyが落下した場合、エフェクトを発生させる。
+                Instantiate(effectPrefab, other.transform.position, Quaternion.Euler(effectRotation)
                 );
             }
         }

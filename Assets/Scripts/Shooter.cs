@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class Shooter : MonoBehaviour
 {
-    const int MaxShotPower = 5; //マックスで連続投入できる数 5という設定
-    const int RecoverySeconds = 3; //回復までタイム
+    const int MaxShotPower = 5; //5回連続で発射できる
+    const int RecoverySeconds = 3; //発射のクールタイム
 
-    int shotPower = MaxShotPower; //MaxShotPowerで設定した数がそのままshotパワーになっている
+    int shotPower = MaxShotPower; //MaxShotPower　＝　shotPower
 
     AudioSource shotSound;
 
@@ -55,8 +55,7 @@ public class Shooter : MonoBehaviour
     }
 
     //voidじゃなくVector3が返ってくる
-    //マウスが押された位置と連動するようにBaseのどこをめがけてCandyを飛ばすか、
-    //その位置を決めている
+    //マウスが押された位置と連動するようにBaseのどこをめがけてCandyを飛ばすか、その位置を決めている
     Vector3 GetInstantiatePosition()
     {
         float xx = Input.mousePosition.x;
